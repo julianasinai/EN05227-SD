@@ -99,16 +99,14 @@ public class ComputeEngine implements Compute {
     }
 
     public String namesByCourse(String course) {
-        // String names = "Graduados em " + course + ":\n";
         String names = "";
 
         for (Profile p : map.values()) {
             if (p.getFormacao().equals(course)) {
                 names += p.getNomeCompleto() + "\n";
-            } else {
-                names = "Curso não encontrado";
             }
         }
+
         return names;
     }
 
@@ -118,8 +116,6 @@ public class ComputeEngine implements Compute {
         for (Profile p : map.values()) {
             if (p.getResidencia().equals(city)) {
                 habilities += p.getNomeCompleto() + ": " + p.getHabilidades() + "\n";
-            } else {
-                habilities = "Cidade não encontrada";
             }
         }
 
